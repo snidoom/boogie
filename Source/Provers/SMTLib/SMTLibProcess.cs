@@ -100,8 +100,8 @@ namespace Microsoft.Boogie.SMTLib
     {
       if (options.Verbosity >= 2) {
         var log = cmd;
-        if (log.Length > 50)
-          log = log.Substring(0, 50) + "...";
+        //if (log.Length > 50)
+        //  log = log.Substring(0, 50) + "...";
         log = log.Replace("\r", "").Replace("\n", " ");
         Console.WriteLine("[SMT-INP-{0}] {1}", smtProcessId, log);
       }
