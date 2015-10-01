@@ -115,7 +115,7 @@ namespace Microsoft.Boogie.SMTLib
         case SolverKind.CVC4:
           if (path == null)
             path = CVC4.ExecutablePath();
-          return SMTLibProcess.ComputerProcessStartInfo(path, "--lang=smt --no-strict-parsing --no-condense-function-values --incremental --tlimit-per=5000 --tlimit=15000");
+          return SMTLibProcess.ComputerProcessStartInfo(path, "--lang=smt --no-strict-parsing --no-condense-function-values --incremental --quiet --tlimit-per=5000 --tlimit=15000");
         default:
           Debug.Assert(false);
           return null;
