@@ -1172,7 +1172,7 @@ namespace Microsoft.Boogie.SMTLib
         usedLogNames.Add(curFilename);
       }
       string folder = Path.GetDirectoryName(filename);
-      if (!Directory.Exists(folder))
+      if (!String.IsNullOrWhiteSpace(folder) && !Directory.Exists(folder))
       {
         Directory.CreateDirectory(folder);
       }
